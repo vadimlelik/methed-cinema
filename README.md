@@ -1,1 +1,1 @@
-# https://github.com/vadimlelik/methed-cinema
+# https://vadimlelik.github.io/methed-cinema/
