@@ -1,3 +1,4 @@
+import renderCard from './renderCard.js'
 import { getTrends } from './services.js'
 
 const filmWeek = document.querySelector('.film-week')
@@ -32,8 +33,11 @@ const firstRender = ({
 
 const renderVideo = async () => {
   const data = await getTrends()
-  console.log(data)
-  firstRender(data.results[0])
+
+  const [ferstcard, ...otherCard] = data.results
+  otherCard.length = 12
+  firstRender(ferstcard)
+  renderCard(otherCard)
 }
 
 export default renderVideo
